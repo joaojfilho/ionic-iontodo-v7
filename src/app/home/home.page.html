@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Tarefas </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tarefas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-input placeholder="Nova tarefa" [(ngModel)]="newTitle"></ion-input>
+    <ion-button expand="block" (click)="addTodo()">Adicionar</ion-button>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let todo of todos">
+      <ion-checkbox
+        slot="start"
+        [(ngModel)]="todo.done"
+        (ionChange)="toggleDone(todo.id)"
+      ></ion-checkbox>
+      <ion-label *ngIf="editId !== todo.id" [class.done]="todo.done"
+        >{{ todo.title }}</ion-label
+      >
+      <ion-input *ngIf="editId === todo.id" [(ngModel)]="editTitle"></ion-input>
+      <ion-button
+        fill="clear"
+        size="small"
+        *ngIf="editId !== todo.id"
+        (click)="startEdit(todo)"
+      >
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        fill="clear"
+        size="small"
+        color="danger"
+        (click)="deleteTodo(todo.id)"
+      >
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        fill="clear"
+        size="small"
+        color="success"
+        *ngIf="editId === todo.id"
+        (click)="saveEdit()"
+      >
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        fill="clear"
+        size="small"
+        color="medium"
+        *ngIf="editId === todo.id"
+        (click)="cancelEdit()"
+      >
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
