@@ -17,6 +17,8 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TodoService, Todo } from '../todo.service';
+import { addIcons } from 'ionicons';
+import { createOutline, trashOutline, checkmarkOutline, closeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
@@ -54,6 +56,14 @@ export class HomePage {
       this.addTodo();
     }
   });
+
+  addIcons({
+      createOutline,
+      trashOutline, 
+      checkmarkOutline,
+      closeOutline
+    });
+    
   }
 
   getCurrentTime(): string {

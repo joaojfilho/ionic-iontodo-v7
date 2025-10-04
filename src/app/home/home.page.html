@@ -82,7 +82,7 @@
     <ion-button expand="block" (click)="addTodo()" >Adicionar</ion-button>
   </div>
 
-  <ion-list>
+  <ion-list >
     <ion-item *ngFor="let todo of todos">
       <ion-checkbox
         slot="start"
@@ -92,41 +92,24 @@
       <ion-label *ngIf="editId !== todo.id" [class.done]="todo.done"
         >{{ todo.title }}</ion-label
       >
-      <ion-input *ngIf="editId === todo.id" [(ngModel)]="editTitle"></ion-input>
-      <ion-button
-        fill="clear"
-        size="small"
-        *ngIf="editId !== todo.id"
-        (click)="startEdit(todo)"
-      >
-        <ion-icon name="create-outline"></ion-icon>
+      <ion-input  *ngIf="editId === todo.id" [(ngModel)]="editTitle"></ion-input>
+      
+      <ion-button fill="clear"  size="small" *ngIf="editId !== todo.id" (click)="startEdit(todo)">
+           <ion-icon name="create-outline"></ion-icon>
       </ion-button>
-      <ion-button
-        fill="clear"
-        size="small"
-        color="danger"
-        (click)="deleteTodo(todo.id)"
-      >
-        <ion-icon name="trash-outline"></ion-icon>
+
+      <ion-button  fill="clear"  size="small" color="danger" (click)="deleteTodo(todo.id)">
+            <ion-icon name="trash-outline"></ion-icon>
       </ion-button>
-      <ion-button
-        fill="clear"
-        size="small"
-        color="success"
-        *ngIf="editId === todo.id"
-        (click)="saveEdit()"
-      >
-        <ion-icon name="checkmark-outline"></ion-icon>
+
+      <ion-button  fill="clear" size="small"  color="success" *ngIf="editId === todo.id" (click)="saveEdit()">
+          <ion-icon name="checkmark-outline"></ion-icon>
       </ion-button>
-      <ion-button
-        fill="clear"
-        size="small"
-        color="medium"
-        *ngIf="editId === todo.id"
-        (click)="cancelEdit()"
-      >
-        <ion-icon name="close-outline"></ion-icon>
+
+      <ion-button fill="clear" size="small" color="medium" *ngIf="editId === todo.id" (click)="cancelEdit()">
+           <ion-icon name="close-outline"></ion-icon>
       </ion-button>
+
     </ion-item>
   </ion-list>
   <!-- Widget de Hora -->
