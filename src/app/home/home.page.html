@@ -47,6 +47,29 @@
 }
 </style>
 
+<style>
+.time-widget {
+  background: linear-gradient(135deg, #e7863b 0%, #e7863b 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 20px;
+}
+
+.time-widget h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.time-widget p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+</style>
+
 <ion-content [fullscreen]="true" class="geometric-background"  >
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -106,4 +129,9 @@
       </ion-button>
     </ion-item>
   </ion-list>
+  <!-- Widget de Hora -->
+  <div class="time-widget">
+    <h1>{{ getCurrentTime() }}</h1>
+    <p>{{ getCurrentDate() }}</p>
+  </div>
 </ion-content>

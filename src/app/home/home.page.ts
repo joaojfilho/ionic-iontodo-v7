@@ -56,6 +56,21 @@ export class HomePage {
   });
   }
 
+  getCurrentTime(): string {
+    return new Date().toLocaleTimeString('pt-BR', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+
+  getCurrentDate(): string {
+    return new Date().toLocaleDateString('pt-BR', {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long'
+    });
+  }
+
   loadTodos() {
     this.todos = this.todoService.getTodos();
   }
