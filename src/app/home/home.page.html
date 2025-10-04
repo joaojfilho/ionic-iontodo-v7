@@ -92,7 +92,7 @@
       <ion-label *ngIf="editId !== todo.id" [class.done]="todo.done"
         >{{ todo.title }}</ion-label
       >
-      <ion-input  *ngIf="editId === todo.id" [(ngModel)]="editTitle"></ion-input>
+      <ion-input  *ngIf="editId === todo.id" [(ngModel)]="editTitle" autofocus></ion-input>
       
       <ion-button fill="clear"  size="small" *ngIf="editId !== todo.id" (click)="startEdit(todo)">
            <ion-icon name="create-outline"></ion-icon>
