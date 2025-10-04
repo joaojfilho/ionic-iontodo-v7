@@ -7,3 +7,15 @@
   text-decoration: line-through;
   color: #888;
 }
+
+.professional-content {
+  ion-item {
+    --border-radius: 8px;
+    margin: 8px 16px;
+    border-left: 4px solid var(--ion-color-primary);
+  }
+  
+  ion-card {
+    margin: 16px;
+  }
+}

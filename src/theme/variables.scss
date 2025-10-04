@@ -34,3 +34,24 @@ $colors: (
 	--ion-color-light: #f4f5f8;
 	--ion-color-light-contrast: #222428;
 }
+
+// === CORES PROFISSIONAIS ===
+:root {
+  --ion-color-primary: #e7863b;
+  --ion-color-primary-rgb: 37, 99, 235;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #2157d5;
+  --ion-color-primary-tint: #3b73ed;
+  
+  --ion-background-color: #f8fafc;
+}
+
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

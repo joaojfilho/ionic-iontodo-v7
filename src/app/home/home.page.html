@@ -1,10 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tarefas </ion-title>
+    <ion-title>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <ion-icon name="checkmark-done" color="primary"></ion-icon>
+    Controle de Tarefas
+  </div>
+</ion-title>
+    <!-- <ion-title> Tarefas </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="professional-content">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tarefas</ion-title>
@@ -13,7 +19,7 @@
 
   <div id="container">
     <ion-input placeholder="Nova tarefa" [(ngModel)]="newTitle"></ion-input>
-    <ion-button expand="block" (click)="addTodo()">Adicionar</ion-button>
+    <ion-button expand="block" (click)="addTodo()" >Adicionar</ion-button>
   </div>
 
   <ion-list>

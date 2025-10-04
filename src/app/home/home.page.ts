@@ -44,6 +44,12 @@ export class HomePage {
 
   constructor(private todoService: TodoService) {
     this.loadTodos();
+
+    document.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      this.addTodo();
+    }
+  });
   }
 
   loadTodos() {
