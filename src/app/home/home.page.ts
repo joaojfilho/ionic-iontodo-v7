@@ -11,6 +11,8 @@ import {
   IonLabel,
   IonCheckbox,
   IonIcon,
+  IonButtons,
+  IonAvatar,
 } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -29,11 +31,13 @@ import { TodoService, Todo } from '../todo.service';
     IonContent,
     IonInput,
     IonButton,
+    IonButtons,
     IonList,
     IonItem,
     IonLabel,
     IonCheckbox,
     IonIcon,
+    IonAvatar,
   ],
 })
 export class HomePage {

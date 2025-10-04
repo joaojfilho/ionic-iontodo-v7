@@ -1,16 +1,53 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-  <div style="display: flex; align-items: center; gap: 8px;">
-    <ion-icon name="checkmark-done" color="primary"></ion-icon>
-    Controle de Tarefas
-  </div>
-</ion-title>
-    <!-- <ion-title> Tarefas </ion-title> -->
+  <ion-toolbar class="professional-toolbar">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" class="avatar-button">
+        <ion-avatar>
+          <img src="assets/images/avatar2.png" alt="">
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title class="professional-title">
+      <div class="title-content">
+        <ion-icon name="checkmark-done-circle" color="primary"></ion-icon>
+        <span>Controle de Tarefas</span>
+      </div>
+    </ion-title>
+    
+    <!-- <ion-buttons slot="end">
+      <ion-button fill="clear">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="professional-content">
+<style>
+.professional-toolbar {
+  --background: linear-gradient(135deg, #e7863b 0%, #e7863b 100%);
+  --color: white;
+  --border-color: transparent;
+}
+
+.professional-title .title-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.avatar-button ion-avatar {
+  width: 32px;
+  height: 32px;
+}
+</style>
+
+<ion-content [fullscreen]="true" class="geometric-background"  >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tarefas</ion-title>
